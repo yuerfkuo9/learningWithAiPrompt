@@ -67,10 +67,77 @@ if value > 1 :
         print(count)
 else :
     print("该数字不为素数")
-'''
-for i in range(1,4):
+
+for i in range(1,6):
+    print("")
     for j in range(1,i+1):
         print("*",end='')
-    print("\n")
+for i in range(5):
+    print("")
+    for j in range(5):
+        if j < 5-i-1:
+            print("i",end='')
+        else:
+            print("*", end='')
 
+for i in range(5):
+    print("")
+    print("i")
+    for j in range(5-i-1):
+        print("i",end='')
+    for j in range(2*i+1):
+        print("*", end='')
 
+for num in range(100,1000):
+    ge = num % 10
+    #print(ge)
+    shi = num // 10 % 10
+    #print(shi)
+    bai = int(num // 100)
+    #print(bai)
+    if num == ge **3 + shi ** 3 + bai **3 :
+        print('%d 是水仙花数' % (num))
+'''
+from random import randint
+
+money = 1000
+#初始资金
+bet = 0
+#赌注
+valid = True
+while money > 0:
+    if bet > 1000 :
+        print("您没有那么多的筹码")
+        valid = False
+    while True:
+        bet = int(input("请输入本局的筹码："))
+        if 0 < bet <= 1000:
+            break
+        else :
+            print("您没有那么多的筹码")
+    dice = randint(1,6) + randint(1,6)
+    print('您摇出了%d'%dice)
+    if dice == 7 or dice == 11:
+        print("玩家获胜")
+        money += bet
+        print('您还有%d' % money)
+    elif dice == 2 or dice == 3 or dice == 12 :
+        print("玩家失败")
+        money -= bet
+        print('您还有%d' % money)
+    else:
+        while True:
+            d2 = randint(1,6) + randint(1,6)
+            print('您摇出了%d' % d2)
+            if d2 == dice :
+                print("玩家获胜")
+                money += bet
+                print('您还有%d' % money)
+                break
+            elif d2 == 7:
+                print("玩家失败")
+                money -= bet
+                print('您还有%d' % money)
+                break
+
+print("您破产了")
