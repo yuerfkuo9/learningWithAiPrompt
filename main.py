@@ -67,10 +67,57 @@ if value > 1 :
         print(count)
 else :
     print("该数字不为素数")
-'''
+
 for i in range(1,4):
     for j in range(1,i+1):
         print("*",end='')
     print("\n")
 
+#斐波那契数列
+a = 0
+b = 1
+for i in range(20):
+    count += 1
+    a , b = b , a + b
+    print(a)
 
+#一万以内的完美数
+k = 0
+while (k < 10000) :
+    k += 1
+    sum = 0
+    for i in range(1,k-1):
+        if k % i == 0 :
+            sum += i
+    if sum == k :
+        print(k)
+
+#一百以内所有素数
+for i in range(2,101):
+    wether = 1
+    for j in range(2,i):
+        if i % j == 0 :
+            wether = 0
+            break
+    if wether == 1:
+        print(i)
+'''
+#实现计算求最大公约数和最小公倍数的函数。
+def maxYueShu (a,b):
+    yueShu = 0
+    maxyue = 0
+    if a > b :
+        yueShu = a
+    else :
+        yueShu = b
+    for i in range(1,yueShu+1):
+        if a % i == 0 and b % i == 0 :
+            maxyue = i
+    return maxyue
+
+def minBeiShu (a,b):
+    maxYueS = a * b // maxYueShu(a,b)
+    return maxYueS
+
+print(maxYueShu(12,16))
+print(type(minBeiShu(12,16)))
