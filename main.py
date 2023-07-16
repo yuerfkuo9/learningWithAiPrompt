@@ -101,7 +101,7 @@ for i in range(2,101):
             break
     if wether == 1:
         print(i)
-'''
+
 #实现计算求最大公约数和最小公倍数的函数。
 def maxYueShu (a,b):
     yueShu = 0
@@ -121,3 +121,37 @@ def minBeiShu (a,b):
 
 print(maxYueShu(12,16))
 print(type(minBeiShu(12,16)))
+'''
+#实现判断一个数是不是回文数的函数
+def determine_reverse(origin):
+    reverse_a = 0
+    limit = origin
+    while  limit > 0:
+        reverse_a = reverse_a * 10 + limit % 10
+        limit //= 10
+    if reverse_a == origin:
+        print("这个数是回文数")
+        return True
+    else:
+        print("这个数不是回文数")
+        return False
+
+
+#实现判断一个数是不是素数的函数。
+def determine_prime(value):
+    for i in range(2, value):
+        if value % i == 0:
+            print("这个数不是素数")
+            return False
+    if value != 1:
+        print("这个数是素数")
+        return True
+#写一个程序判断输入的正整数是不是回文素数
+if __name__ == '__main__':
+    num = int(input('请输入正整数: '))
+    if determine_reverse(num) and determine_reverse(num):
+        print('%d是回文素数' % num)
+
+s1 = '\'hello, world!\''
+s2 = '\n\\hello, world!\\\n'
+print(s1, s2, end='')
