@@ -236,6 +236,7 @@ def set_day():
 #print(set_day(input("请输入年月日：")))
 print(set_day())
 '''
+#乔瑟夫圣杯问题
 def joseph (num):
     people_num = [x for x in range(1, num+1)]
     count = 0
