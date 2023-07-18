@@ -211,4 +211,6 @@ print(person)
 fruits_list = ['apple', 'banana', 'orange']
 fruits_tuple = tuple(fruits_list)
 print(fruits_tuple)
+
+
 '''

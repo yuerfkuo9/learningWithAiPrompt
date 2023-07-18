@@ -235,7 +235,7 @@ def set_day():
     return thday + day
 #print(set_day(input("请输入年月日：")))
 print(set_day())
-'''
+
 #乔瑟夫圣杯问题
 def joseph (num):
     people_num = [x for x in range(1, num+1)]
@@ -252,3 +252,130 @@ def joseph (num):
         i += 1
     return people_num
 print(joseph(30))
+
+class Student(object):
+
+    # __init__是一个特殊方法用于在创建对象时进行初始化操作
+    # 通过这个方法我们可以为学生对象绑定name和age两个属性
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def study(self, course_name):
+        print('%s正在学习%s.' % (self.name, course_name))
+
+    # PEP 8要求标识符的名字用全小写多个单词用下划线连接
+    # 但是部分程序员和公司更倾向于使用驼峰命名法(驼峰标识)
+    def watch_movie(self):
+        if self.age < 18:
+            print('%s只能观看《熊出没》.' % self.name)
+        else:
+            print('%s正在观看岛国爱情大电影.' % self.name)
+def main():
+    # 创建学生对象并指定姓名和年龄
+    stu1 = Student('骆昊', 38)
+    # 给对象发study消息
+    stu1.study('Python程序设计')
+    # 给对象发watch_av消息
+    stu1.watch_movie()
+    stu2 = Student('王大锤', 15)
+    stu2.study('思想品德')
+    stu2.watch_movie()
+
+
+if __name__ == '__main__':
+    main()
+class Test(object):
+
+    def __init__(self, foo):
+        self.foo = foo
+
+    def __bar(self):
+        print(self.foo)
+        print('__bar')
+
+
+def main():
+    test = Test('hello')
+    # AttributeError: 'Test' object has no attribute '__bar'
+    test.bar()
+    # AttributeError: 'Test' object has no attribute '__foo'
+    print(test.foo)
+
+
+if __name__ == "__main__":
+    main()
+    
+class Test:
+
+    def __init__(self, foo):
+        self.__foo = foo
+
+    def __bar(self):
+        print(self.__foo)
+        print('__bar')
+
+
+def main():
+    test = Test()
+    test._Test__bar()
+    print(test._Test__foo)
+
+if __name__ == "__main__":
+    main()
+
+#定义一个类描述数字时钟。
+from time import sleep
+
+def main():
+    clock = Clock(23, 59, 57)
+    while True :
+        sleep(1)
+        clock.show()
+        clock.run()
+class Clock(object):
+    def __init__(self,hour,minute,second):
+        self.hour = hour
+        self.minute = minute
+        self.second = second
+    def run(self):
+        self.second += 1
+        if self.second == 60:
+            self.minute += 1
+            self.second = 0
+            if self.minute == 60:
+                self.hour += 1
+                self.minute = 0
+                if self.hour == 24:
+                    self.hour = 0
+
+    def show(self):
+        print("现在的时间是%d:%d:%d"% (self.hour,self.minute,self.second))
+
+if __name__ == "__main__":
+    main()
+'''
+class Distance(object):
+    def __init__(self,x,y,x1,y1):
+        self.x = x
+        self.y = y
+        self.x1 = x1
+        self.y1 = y1
+    def calculate(self):
+        dis_result = 0
+        if self.x == self.x1 :
+            dis_result = abs(self.y - self.y1)
+            print('结果是%d' % (dis_result))
+        elif self.y == self.y1 :
+            dis_result = abs(self.x - self.x1)
+            print('结果是%d' % (dis_result))
+        else :
+            dis_result = ((self.x - self.x1)**2 + (self.y - self.y1)**2)**0.5
+            print('结果是%d' % (dis_result))
+
+def main():
+    distance = Distance(-20,20,20,-10)
+    distance.calculate()
+
+if __name__ == "__main__":
+    main()
