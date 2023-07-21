@@ -37,6 +37,9 @@ splitlines(keepends = False):按行进行分割，最后输出列表 换行符
 LIST
 --------------------------------
 --------------------------------
+```
+list(input("输入的都会变成单独的字符串值被储存在列表中，exp：ambition /a m b i t i o n "))
+```
 
 removeprefix(prefix)
 
