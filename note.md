@@ -1,15 +1,11 @@
 end = ""
 "添加后可以换行"
 
-"print('%.1f 华氏温度 = %.1f 摄氏温度' % (huashi,sheshi))"
-"免于更改数字 %d整数占位符 %f小数占位符 %%百分号"
+占位符： %d整数占位符 %f小数占位符 %%百分号 %s字符串  
 
-"//是除完去除小数，%是余数"
-'''
-Python为字符串类型提供了非常丰富的运算符，我们可以使用+运算符来实现字符串的拼接，
-可以使用*运算符来重复一个字符串的内容，可以使用in和not in来判断一个字符串是否包含另外一个字符串（成员运算），
-我们也可以用[]和[:]运算符从字符串取出某个字符或某些字符（切片运算），代码如下所示。
-str2 = 'abc123456'
+用法：print('%.1f 华氏温度 = %.1f 摄氏温度' % (huashi,sheshi))
+
+//是除完去除小数，%是余数
 
 CHAR
 --------------------------------
@@ -24,18 +20,19 @@ removeprefix(prefix)： 字符串前缀 去除整个prefix字符串
 
 removesuffix(suffix)： 字符串后缀 去除整个suffix字符串
 
-### 拆分和拼接
-partition(sep)： sep参数代表切割符 会返回从左到右 切割符左边 切割符本身 和切割符右边共同组成的三个元素的元组
+### 拆分和拼接  
+***
+partition(sep)： sep参数代表切割符 会返回从左到右 切割符左边 切割符本身 和切割符右边共同组成的三个元素的元组  
 
 rpartition(sep)：方向相反 sep参数代表切割符 会返回从右到左 切割符左边 切割符本身 和切割符右边共同组成的三个元素的元组
 
-split(sep = None,maxsplit = -1): sep参数同上，默认为空格。maxsplit为-1代表只要有切割符就切割 1代表切一个 以此类推
+split(sep = None,maxsplit = -1): sep参数同上，默认为空格。maxsplit为-1代表只要有切割符就切割 1代表切一个 以此类推 
 
-rsplit(sep = None,maxsplit = -1): 方向相反 sep参数同上，默认为空格。maxsplit为-1代表只要有切割符就切割 1代表切一个 以此类推
+rsplit(sep = None,maxsplit = -1): 方向相反 sep参数同上，默认为空格。maxsplit为-1代表只要有切割符就切割 1代表切一个 以此类推 
 
-splitlines(keepends = False):按行进行分割，最后输出列表 换行符
+splitlines(keepends = False):按行进行分割，最后输出列表 换行符  
 
-join(iterable):字符串拼接
+'sep'.join(sep_object):sep_object可以为元组，列表，字符串，但对象必须为字符串
 
 LIST
 --------------------------------

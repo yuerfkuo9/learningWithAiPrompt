@@ -13,3 +13,30 @@ print(instant1[2])
 # 因为split如果遇到使用不同换行符的时候没有使用splitlines的时候更好用，splilines是统一格式
 
 #4. 下面代码使用加号运算符（+）进行字符串拼接，现在看起来有点太 low 了，请将它改为使用 join() 方法来拼接吧~!?
+'''k = ' '.join(["I","love","Fishc"])
+print(k)
+print(",\n".join("FishC"))'''
+
+#0. 编写一个生成凯撒密码的程序
+origin = 'i am teacher'
+#origin = input("请输入需要加密的明文（只支持英文字母）：")
+print(origin)
+print(type(origin))
+plaintext = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+#print(len(plaintext))
+place = int(input("请输入需要移动的位数："))
+result = ''
+for k in range(len(origin)):
+    count = plaintext.find(origin[k])
+    print(plaintext[count])
+    count += place
+    if origin[k] == ' ':
+        result += ' '
+        coutinue
+    elif count > len(plaintext):
+        count -= len(plaintext)
+    result += plaintext[count]
+print(result)
+
+
+
