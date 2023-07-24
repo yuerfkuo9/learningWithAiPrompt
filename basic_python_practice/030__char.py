@@ -88,5 +88,6 @@ for i in words:
 
 print(res)
 
-test = list(input("输入的都会变成单独的字符串值被储存在列表中，exp：ambition /a m b i t i o n "))
-print(test)
+'''test = list(input("输入的都会变成单独的字符串值被储存在列表中，exp：ambition /a m b i t i o n "))
+print(test)'''
+

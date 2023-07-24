@@ -68,4 +68,13 @@ if __name__ == '__main__':
 装饰器可以用语法糖 @
 
 
-'''
+### 字典
+***
+.index 可以获得对应的索引值  
+
+fromkeys(iterable[,values]) :
+```python
+a = dict.fromkeys("dish",250)
+print(a)
+#{'d': 250, 'i': 250, 's': 250, 'h': 250}
+```

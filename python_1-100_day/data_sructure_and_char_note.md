@@ -392,6 +392,7 @@ print(scores.get('武则天', 60))
 print(scores.popitem())
 print(scores.popitem())
 print(scores.pop('骆昊', 100))
+del scores['狄仁杰']
 # 清空字典
 scores.clear()
 print(scores)
