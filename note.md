@@ -78,3 +78,8 @@ a = dict.fromkeys("dish",250)
 print(a)
 #{'d': 250, 'i': 250, 's': 250, 'h': 250}
 ```
+get(key[,default]) 
+setdefault(key[,default])
+items()  获得键值对
+keys()  获得键
+values()  获得值

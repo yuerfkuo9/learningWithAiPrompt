@@ -1,6 +1,6 @@
 #0. 请问下面变量 d 是一个字典吗？
 '''d = {}
-不是'''
+不是 // 是'''
 
 #1. 字典中，同样一个值是否可以出现两次？
 '''可以 键不可以出现两次一样的'''
@@ -23,7 +23,7 @@ del d
 >>> f = dict({99="吕布", 90="关羽", 60="刘备"})
 >>> h = dict({99:"吕布", 90:"关羽"}, 60="刘备")
 >>> i = dict(zip([99, 90, 60], ["吕布","关羽","刘备"]))
-a,c,d,f,i'''
+a,c,d,f,i // a d e i'''
 
 #5. 请问下面代码执行之后，变量 b 中的内容是？
 '''>>> a = {"小甲鱼":"You are my super star."}
@@ -32,33 +32,49 @@ a,c,d,f,i'''
 {}'''
 
 #1. 请编写一个电话簿程序
-print("电话薄打开中.....")
+'''print("电话薄打开中.....")
 tele_record = dict()
 while True :
     inpu = input("请输入指令：（1.录入 / 2.查询 / 3.删除 / 4.打印 / 5.推出）:")
-    print(inpu)
-    print(type(inpu))
-    print(inpu == 1)
     if inpu == '1' :
         print("录入模式-------")
         con = 1
         while con :
             name = input("请输入姓名：")
-            if
+            if tele_record.get(name) :
+                print('该姓名已录入，手机号码为%s' % (tele_record.get(name)))
+                decide = input('请问是否修改（Y/N）')
+                if decide == "N":
+                    con = 0
+                    continue
             tele = input("请输入电话：")
-            if tele == 
+            while not tele.isdigit() or len(tele) != 11 :
+                tele = input('输入不合法，请重新输入：')
             tele_record[name] = tele
             decide = input("是否继续录入（Y/N）")
             if decide == "N" :
                 break
 
     elif inpu == '2' :
-        pass
+        print("查询模式-------")
+        while True :
+            name = input("请输入姓名：")
+            print("%s ： %s" % (name,tele_record.get(name)))
+            decide = input("是否继续查询（Y/N）")
+            if decide == "N":
+                break
     elif inpu == '3' :
-        pass
+        print("删除模式-------")
+        while True :
+            name = input("请输入姓名：")
+            del tele_record[name]
+            decide = input("是否继续删除（Y/N）")
+            if decide == "N":
+                break
     elif inpu == '4' :
-        pass
+        print("打印模式-------")
+        print(tele_record)
     elif inpu == '5' :
-        pass
+        break
     else :
-        print("指令错误，请重新输入")
+        print("指令错误，请重新输入")'''

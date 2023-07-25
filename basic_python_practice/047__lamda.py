@@ -59,7 +59,7 @@ def test():
     return 2
 print(a1(a2(a3(test()))))'''
 
-power = {"a": 999, "b": 888, "c": 666, "d": 900, "e": 789, "f": 999}
+'''power = {"a": 999, "b": 888, "c": 666, "d": 900, "e": 789, "f": 999}
 
 # 请 lambda 表达式和 filter() 函数配合，替换下面的代码
 greater = []
@@ -67,14 +67,14 @@ for k, v in power.items():
     if v > 800:
         greater.append((k, v))
 # 请 lambda 表达式和 filter() 函数配合，替换下面的代码
-
 print(greater)
 [('a', 999), ('b', 888), ('c', 900), ('d', 999)]
-print(power.item[1])
+print(power.item[1])'''
 
-power = {"a": 999, "b": 888, "c": 666, "d": 900, "e": 789, "f": 999}
-greater = filter(lambda x : x > 800,range(power))
-b = filter(lambda k: k ** 2 % 2  , range(10))
+'''power = {"a": 999, "b": 888, "c": 666, "d": 900, "e": 789, "f": 999}
+#print(power[1])
+greater = dict(filter(lambda k : k[1] > 800,power.items()))
+print(greater)'''
 
 members = {
     "apex" : {"loba":83, "robot":89, "seer":64, "ghost":75, "angel":96},
@@ -82,6 +82,6 @@ members = {
     "hero" : {"superman":99, "batman":84, "sea":63, "witch":78, "speed":78}}
 
 # 请在此处添加一行代码，完成题目要求，并将结果保存在变量 x 中
-x = filter(for each in members (if lambda k : x > ,range(members)))
+x = dict(filter(lambda n : n[1][1] > 80,members.items()))
 print(x)
 #['鱼C工作室:二师兄', '复仇者联盟:绿巨人', '奥特曼家族:泰罗']
